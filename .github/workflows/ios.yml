@@ -42,3 +42,20 @@ jobs:
           if [ "`ls -A | grep -i \\.xcworkspace\$`" ]; then filetype_parameter="workspace" && file_to_build="`ls -A | grep -i \\.xcworkspace\$`"; else filetype_parameter="project" && file_to_build="`ls -A | grep -i \\.xcodeproj\$`"; fi
           file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
           xcodebuild test-without-building -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -destination "platform=$platform,name=$device"
+
+  DocumentatonJob:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Extract Documentation
+        uses: SwiftDocOrg/swift-doc@master
+        with:
+           inputs: "cosc345-2022-b"
+           module-name: MyLibrary
+           output: "Documentation"
+      - name: Upload Documentation to Wiki
+        uses: SwiftDocOrg/github-wiki-publish-action@v1
+        with:
+           path: "Documentation"
+        env:
+           GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}

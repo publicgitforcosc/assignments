@@ -50,7 +50,7 @@ jobs:
       - name: Extract Documentation
         uses: SwiftDocOrg/swift-doc@master
         with:
-           inputs: "cosc345-2022-b"
+           inputs: "StudyShare"
            module-name: MyLibrary
            output: "Documentation"
       - name: Upload Documentation to Wiki

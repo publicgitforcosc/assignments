@@ -1,2 +1,5 @@
 # Do not upload Package.resolved, it breaks GitHub actions as it does not recognise the current format
 Package.resolved
+.DS_Store
+README.MD
+.gitignore

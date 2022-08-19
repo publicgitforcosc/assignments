@@ -9,7 +9,8 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    @IBOutlet weak var classTableView: UITableViewCell!
+    
+    @IBOutlet weak var classTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

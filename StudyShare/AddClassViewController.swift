@@ -9,6 +9,10 @@ import UIKit
 
 class AddClassViewController: UIViewController {
 
+    @IBOutlet weak var searchTable: UITableView!
+    @IBOutlet weak var filterField: UITextField!
+    @IBOutlet weak var addButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,5 +29,7 @@ class AddClassViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func addTapped(_ sender: Any) {
+    }
+    
 }

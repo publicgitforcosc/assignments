@@ -1,14 +1,22 @@
 //
-//  MyContentViewController.swift
+//  CreateClassViewController.swift
 //  StudyShare
 //
-//  Created by Matthew Jennings on 7/08/22.
+//  Created by Matthew Jennings on 19/08/22.
 //
 
 import UIKit
 
-class MyContentViewController: UIViewController {
+class CreateClassViewController: UIViewController {
 
+
+    @IBOutlet weak var createButton: UIButton!
+    @IBOutlet weak var paperCodeField: UITextField!
+    @IBOutlet weak var paperDescField: UITextField!
+    @IBOutlet weak var yearField: UITextField!
+    @IBOutlet weak var semesterField: UITextField!
+    @IBOutlet weak var institutionField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,4 +34,6 @@ class MyContentViewController: UIViewController {
     }
     */
 
+    @IBAction func createButtonTapped(_ sender: Any) {
+    }
 }

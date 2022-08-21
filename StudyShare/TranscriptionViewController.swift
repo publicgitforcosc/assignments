@@ -2,14 +2,11 @@
 //  TranscriptionViewController.swift
 //  StudyShare
 //
-//  - simulator catch for the moment: you need to press several times
-//    start/stop transcription before it works
 //  - 60seconds apple limit patch does not work in simulator!
 //  - line 97 contains the final result to save
 //
 //  Created by CGi on 12/08/22.
 //
-import UIKit
 import Speech
 import AVKit
 import UIKit
@@ -76,7 +73,7 @@ class TranscriptionViewController: UIViewController, SFSpeechRecognizerDelegate 
         let inputNode = audioEngine.inputNode
 
         guard let recognitionRequest = recognitionRequest else {
-            fatalError("Unable to create an SFSpeechAudioBufferRecognitionRequest object")
+            fatalError("Unable to create an AudioBuffer object")
         }
         recognitionRequest.shouldReportPartialResults = true
 

@@ -95,9 +95,12 @@ class SignUpViewController: UIViewController {
                 } else {
                     // Success
                     let db = Firestore.firestore()
+                    let groups = ["INIT"]
                     db.collection("users").addDocument(data: ["firstname" : firstname,
                                                               "lastname" : lastname,
-                                                              "uid" : result!.user.uid]) { (error) in
+                                                              "uid" : result!.user.uid,
+                                                              "groups" : groups]
+                                                              ) { (error) in
                         if error != nil{
                             // There was an error
                             self.showError("Could not connect to database, user data not stored")

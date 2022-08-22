@@ -3,14 +3,12 @@
 //  StudyShare
 //
 //  - 60seconds apple limit patch does not work in simulator!
-//  - line 97 contains the final result to save
 //
 //  Created by CGi on 12/08/22.
 //
-
+import UIKit
 import Speech
 import AVKit
-import UIKit
 
 class TranscriptionViewController: UIViewController, SFSpeechRecognizerDelegate {
 

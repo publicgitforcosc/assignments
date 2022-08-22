@@ -2,12 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSSpeechRecognitionUsageDescription</key>
-	<string>-</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>-</string>
+	<string>Please allow access to microphone for transcription</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Please allow access to speech recognition system for transcription</string>
 	<key>NSCameraUsageDescription</key>
-	<string></string>
+	<string>-</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

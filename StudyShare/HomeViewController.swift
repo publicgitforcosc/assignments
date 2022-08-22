@@ -2,38 +2,45 @@
 //  HomeViewController.swift
 //  StudyShare
 //
-//  Created by CGi on 21/08/22.
+//  Created by Matthew Jennings on 31/07/22.
 //
+
 import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 
 class HomeViewController: UIViewController {
+
     
     @IBOutlet weak var classTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getUserDetails()
+        setUpUserDetails()
+        // Do any additional setup after loading the view.
     }
-        
-    func getUserDetails(){
-        // https://www.anycodings.com/1questions/4119941/optimizing-get-from-firestore-in-swift
-        let db = Firestore.firestore()
+    
+    
+    func setUpUserDetails(){
         if Auth.auth().currentUser != nil{
             let user = Auth.auth().currentUser
             User.UID = user!.uid
-           
-            let userDetails = db.collection("users").whereField("uid", isEqualTo: User.UID)
-            userDetails.getDocuments(){ (querySnaphot, err) in
+            let db = Firestore.firestore()
+            let userData = db.collection("users").whereField("uid", isEqualTo: User.UID)
+            userData.getDocuments(){ (querySnaphot, err) in
                 if let err = err {
-                    print("error: \(err)")
+                    print("Error retrieving user data: \(err)")
                 } else{
-                    User.username = (userDataDict["username"] as! String)
+                    let document = querySnaphot!.documents[0]
+                    let userDataDict = document.data()
+                    User.firstName = (userDataDict["firstname"] as! String)
+                    User.lastName = (userDataDict["lastname"] as! String)
+                    User.docID = document.documentID
                 }
             }
         } else {
-            print("error: authentification error") // debug!
+            // Something has gone horribly wrong
         }
     }
+
 }

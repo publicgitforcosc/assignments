@@ -2,34 +2,44 @@
 //  RecordingViewController.swift
 //  StudyShare
 //
-//  Created by Matthew Jennings on 7/08/22.
+//  Created by CGi on 22/08/22.
+//  inspiration & material from koffler - swift & swift documentation
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 
-class RecordingViewController: UIViewController {
-    
-    // Generic view for containing video, this may not be what we want here
-    @IBOutlet weak var videoView: UIView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
+import MobileCoreServices
+import SafariServices
 
-        // Do any additional setup after loading the view.
-    }
-    
+class RecordingViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+      
     @IBAction func recordTapped(_ sender: Any) {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) == false
+        {
+          return
+        }
+        
+        let imgPicker = UIImagePickerController()
+        imgPicker.sourceType = .camera
+        imgPicker.mediaTypes = [kUTTypeMovie as String]
+        imgPicker.delegate = self
+        present(imgPicker, animated: true, completion: nil)
+       
+   
     }
     
     @IBAction func saveTapped(_ sender: Any) {
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    override func viewDidLoad() {
+      super.viewDidLoad()
     }
-    */
+    
+    // Generic view for containing video, this may not be what we want here
+    @IBOutlet weak var videoView: UIView!
+    
+
 
 }

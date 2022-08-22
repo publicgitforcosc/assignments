@@ -18,6 +18,7 @@
 		B1793FE828A34FF200A2F9F3 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B1793FE728A34FF200A2F9F3 /* FirebaseFirestore */; };
 		B1793FEA28A34FF200A2F9F3 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = B1793FE928A34FF200A2F9F3 /* FirebaseStorage */; };
 		B1888AE928AF6812002565DE /* CreateClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1888AE828AF6812002565DE /* CreateClassViewController.swift */; };
+		B1888AEB28B1DB8C002565DE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1888AEA28B1DB8C002565DE /* User.swift */; };
 		B1AA57162896245400A3A8A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AA57152896245400A3A8A0 /* AppDelegate.swift */; };
 		B1AA57182896245400A3A8A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AA57172896245400A3A8A0 /* SceneDelegate.swift */; };
 		B1AA571A2896245400A3A8A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AA57192896245400A3A8A0 /* ViewController.swift */; };
@@ -57,6 +58,7 @@
 		B1793FD3289F529C00A2F9F3 /* RecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
 		B1793FD5289F52AA00A2F9F3 /* TranscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptionViewController.swift; sourceTree = "<group>"; };
 		B1888AE828AF6812002565DE /* CreateClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateClassViewController.swift; sourceTree = "<group>"; };
+		B1888AEA28B1DB8C002565DE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B1AA57122896245400A3A8A0 /* StudyShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1AA57152896245400A3A8A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1AA57172896245400A3A8A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				B1793FD3289F529C00A2F9F3 /* RecordingViewController.swift */,
 				B1793FD5289F52AA00A2F9F3 /* TranscriptionViewController.swift */,
 				B1888AE828AF6812002565DE /* CreateClassViewController.swift */,
+				B1888AEA28B1DB8C002565DE /* User.swift */,
 			);
 			path = StudyShare;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1888AEB28B1DB8C002565DE /* User.swift in Sources */,
 				B1AA571A2896245400A3A8A0 /* ViewController.swift in Sources */,
 				B1793FD2289F528800A2F9F3 /* AddClassViewController.swift in Sources */,
 				B1AA57162896245400A3A8A0 /* AppDelegate.swift in Sources */,

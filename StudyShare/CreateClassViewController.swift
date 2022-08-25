@@ -121,4 +121,9 @@ class CreateClassViewController: UIViewController {
         classStorageLoc.putData(data!)
         return nil
     }
+    
+    @IBAction func backTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }

@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  StudyShare
 //
-//  Created by CGi on 08/08/22
+//  Created by Matthew Jennings on 31/07/22.
 //
 
 import UIKit

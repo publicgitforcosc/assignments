@@ -2,7 +2,10 @@
 //  TranscriptionViewController.swift
 //  StudyShare
 //
+//  - simulator catch for the moment: you need to press several times
+//    start/stop transcription before it works
 //  - 60seconds apple limit patch does not work in simulator!
+//  - line 97 contains the final result to save
 //
 //  Created by CGi on 12/08/22.
 //
@@ -172,6 +175,9 @@ class TranscriptionViewController: UIViewController, SFSpeechRecognizerDelegate 
         // Pass the selected object to the new view controller.
     }
     */
+    @IBAction func backTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
 }
 

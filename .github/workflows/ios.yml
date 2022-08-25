@@ -42,7 +42,6 @@ jobs:
           if [ "`ls -A | grep -i \\.xcworkspace\$`" ]; then filetype_parameter="workspace" && file_to_build="`ls -A | grep -i \\.xcworkspace\$`"; else filetype_parameter="project" && file_to_build="`ls -A | grep -i \\.xcodeproj\$`"; fi
           file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
           xcodebuild test-without-building -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -destination "platform=$platform,name=$device"
-
   DocumentatonJob:
     runs-on: ubuntu-latest
     steps:
@@ -53,6 +52,7 @@ jobs:
            inputs: "StudyShare"
            module-name: MyLibrary
            output: "Documentation"
+           args: "--minimum-access-level, internal"
       - name: Upload Documentation to Wiki
         uses: SwiftDocOrg/github-wiki-publish-action@v1
         with:
@@ -67,6 +67,4 @@ jobs:
       - name: Generate Coverage
         run: xcodebuild clean test -scheme StudyShare -project StudyShare.xcodeproj -destination 'platform=iOS Simulator,OS=15.2,name=iPhone 11' -enableCodeCoverage YES 
       - name: Upload to CodeCov
-        uses: codecov/codecov-action@v1.2.1   
-  
-
+        uses: codecov/codecov-action@v1.2.1  

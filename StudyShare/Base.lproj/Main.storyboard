@@ -329,12 +329,68 @@
             </objects>
             <point key="canvasLocation" x="1418.840579710145" y="-215.625"/>
         </scene>
+        <!--Class Content View Controller-->
+        <scene sceneID="gxi-Ag-puQ">
+            <objects>
+                <viewController id="YOj-zn-CyC" customClass="ClassContentViewController" customModule="StudyShare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iif-E5-eec" customClass="ClassCon">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CLASSNAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Fv-js-pRm">
+                                <rect key="frame" x="130.5" y="84" width="153.5" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cVm-J1-iAt">
+                                <rect key="frame" x="20" y="134" width="374" height="627"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="105" translatesAutoresizingMaskIntoConstraints="NO" id="rfG-1x-3XU">
+                                <rect key="frame" x="49" y="801" width="316" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4nN-Qb-NEs">
+                                        <rect key="frame" x="0.0" y="0.0" width="105.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Back"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pPq-mT-6IR">
+                                        <rect key="frame" x="210.5" y="0.0" width="105.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Add Content"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Mgr-gw-Pan"/>
+                        <color key="backgroundColor" red="0.075020408450000006" green="0.071105441970000002" blue="0.23801707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1Fv-js-pRm" firstAttribute="centerX" secondItem="iif-E5-eec" secondAttribute="centerX" id="AMh-Ir-bP2"/>
+                            <constraint firstItem="cVm-J1-iAt" firstAttribute="top" secondItem="1Fv-js-pRm" secondAttribute="bottom" constant="20" id="FIB-vW-7FJ"/>
+                            <constraint firstItem="rfG-1x-3XU" firstAttribute="centerX" secondItem="iif-E5-eec" secondAttribute="centerX" id="FYT-3x-e9d"/>
+                            <constraint firstItem="Mgr-gw-Pan" firstAttribute="bottom" secondItem="rfG-1x-3XU" secondAttribute="bottom" constant="30" id="cz6-eM-omp"/>
+                            <constraint firstItem="cVm-J1-iAt" firstAttribute="leading" secondItem="Mgr-gw-Pan" secondAttribute="leading" constant="20" id="gza-79-B22"/>
+                            <constraint firstItem="Mgr-gw-Pan" firstAttribute="trailing" secondItem="cVm-J1-iAt" secondAttribute="trailing" constant="20" id="hEp-n2-SAH"/>
+                            <constraint firstItem="rfG-1x-3XU" firstAttribute="top" secondItem="cVm-J1-iAt" secondAttribute="bottom" constant="40" id="u7z-Px-H5v"/>
+                            <constraint firstItem="1Fv-js-pRm" firstAttribute="top" secondItem="Mgr-gw-Pan" secondAttribute="top" constant="40" id="vVJ-2B-vtr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="classNameLabel" destination="1Fv-js-pRm" id="bdi-mS-rCc"/>
+                        <outlet property="contentTable" destination="cVm-J1-iAt" id="KUe-hq-PF1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZWM-VO-lOW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2444.9275362318845" y="-564.50892857142856"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="au0-S4-zoZ">
             <objects>
                 <viewController storyboardIdentifier="HomeVC" id="2RB-UC-btC" customClass="HomeViewController" customModule="StudyShare" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AmT-D5-nYs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZGX-5i-fkd">
@@ -361,7 +417,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="IYH-Ec-u5t">
-                                <rect key="frame" x="7" y="689" width="400" height="133"/>
+                                <rect key="frame" x="7" y="709" width="400" height="133"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufZ-OZ-pcc">
                                         <rect key="frame" x="0.0" y="0.0" width="400" height="31"/>
@@ -448,7 +504,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Back"/>
                                         <connections>
-                                            <segue destination="2RB-UC-btC" kind="show" id="7zk-MK-POb"/>
+                                            <action selector="backTapped:" destination="b4e-Vb-xnA" eventType="touchUpInside" id="d9C-oM-bV1"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -572,7 +628,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Back"/>
                                         <connections>
-                                            <segue destination="2RB-UC-btC" kind="show" id="qGc-U6-4dJ"/>
+                                            <action selector="backTapped:" destination="3YQ-Ie-AIy" eventType="touchUpInside" id="2QJ-qq-LV4"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -692,7 +748,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Back"/>
                                         <connections>
-                                            <segue destination="2RB-UC-btC" kind="show" id="bGz-9e-Wbi"/>
+                                            <action selector="backTapped:" destination="RNF-VR-9WW" eventType="touchUpInside" id="sZh-gY-wjC"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -865,7 +921,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Back"/>
                                         <connections>
-                                            <segue destination="RNF-VR-9WW" kind="show" id="Dtc-fW-cIE"/>
+                                            <action selector="backTapped:" destination="u0c-eE-sDO" eventType="touchUpInside" id="ZYn-3l-axb"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -940,9 +996,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Dtc-fW-cIE"/>
-        <segue reference="7zk-MK-POb"/>
-        <segue reference="0UF-5S-zLo"/>
+        <segue reference="LRq-DT-xyw"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="HomeScreenLogo" width="348" height="339"/>

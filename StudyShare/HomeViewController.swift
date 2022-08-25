@@ -11,7 +11,6 @@ import FirebaseFirestore
 
 class HomeViewController: UIViewController {
 
-    
     @IBOutlet weak var classTable: UITableView!
     
     override func viewDidLoad() {
@@ -20,8 +19,13 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
+    /**
+            Utilizes the currently logged in users UID to retreive their full info from firebase db
+            Stores this information in a class dedicated to holding the users info.
+            Retrives and stores firstname, lastname, documentID(firebase reference to this user)
+    */
     func setUpUserDetails(){
+        
         if Auth.auth().currentUser != nil{
             let user = Auth.auth().currentUser
             User.UID = user!.uid

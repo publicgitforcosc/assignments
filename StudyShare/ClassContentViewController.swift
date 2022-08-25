@@ -1,18 +1,16 @@
 //
-//  AddClassViewController.swift
+//  ClassContentViewController.swift
 //  StudyShare
 //
-//  Created by Matthew Jennings on 7/08/22.
+//  Created by Matthew Jennings on 24/08/22.
 //
 
 import UIKit
 
-class AddClassViewController: UIViewController {
+class ClassContentViewController: UIViewController {
 
-    @IBOutlet weak var searchTable: UITableView!
-    @IBOutlet weak var filterField: UITextField!
-    @IBOutlet weak var addButton: UIButton!
-    
+    @IBOutlet weak var classNameLabel: UILabel!
+    @IBOutlet weak var contentTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,12 +27,5 @@ class AddClassViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    @IBAction func addTapped(_ sender: Any) {
-    }
-    
-    @IBAction func backTapped(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    
+
 }
